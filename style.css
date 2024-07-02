@@ -1,24 +1,120 @@
+* {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
 body {
     position: fixed;
-    background-color: rgba(0, 0, 0, 1)
+    background-color: rgba(0, 0, 0, 1);
+    overflow: auto;
 }
 
 header {
-    min-width: 100vw;
-    position: sticky;
-    background-color: aliceblue;
+    min-width: 98vw;
+    /* position: sticky; */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(50px);
     display: flex;
+    height: 10vh;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
 }
-header > #logo {
-    margin-right:auto;
+
+header>#logo {
+    flex: 1 0 20%;
+    justify-self: flex-start;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin: 10px;
     font-size: 1em;
     font-weight: bold;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+}
+
+header #links,
+#links a {
+    font-size: 100%;
+    margin: 10px;
+    justify-self: flex-start;
+    flex: 1 1 50%;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(28, 38, 119);
+    margin-right: auto;
+    justify-content: space-around;
+}
+
+header>button {
+    flex: 1 0 20%;
+    margin-left: 10%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 15px;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+#Home {
+    height: 98vh;
+    width: 98vw;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#Download {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
