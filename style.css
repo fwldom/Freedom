@@ -4,6 +4,32 @@
     text-decoration: none;
 }
 
+#Home,
+#Download,
+#Services,
+#AboutUs,
+#ContactUs {
+    animation: transformsca linear;
+    animation-timeline: view();
+}
+
+@keyframes transformsca {
+    15% {
+        opacity: 0.9;
+        transform: scale(0.5);
+    }
+
+    45% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
     background-color: rgba(0, 0, 0, 1);
     overflow: auto;
@@ -38,7 +64,7 @@ body {
 }
 
 header {
-    min-width: 98vw;
+    width: 100vw !important;
     background-color: #1a1a1a;
     /* رنگ پس زمینه هدر */
     backdrop-filter: blur(10px);
@@ -67,15 +93,14 @@ header>#logo {
 }
 
 
-header button,header a {
+header button,
+header>a {
     flex: 1 0 20%;
     margin-left: 10%;
     height: 100%;
     background-color: transparent;
     border-radius: 15px;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
+    border: none;
 }
 
 #Home {
@@ -96,12 +121,15 @@ header button,header a {
     display: flex;
     justify-content: center;
 }
+
 #links {
-   justify-content: space-around;
-   align-items: center;
-   display: flex;
-   flex: 1 0 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+    flex: 1 0 40%;
 }
+
 .btn button {
     align-items: center;
     background-clip: padding-box;
@@ -156,6 +184,7 @@ header button,header a {
     font-size: 0.7em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 #AboutUs {
     margin-top: 30px;
     height: 98vh;
@@ -169,6 +198,7 @@ header button,header a {
     align-items: center;
     flex-wrap: wrap;
 }
+
 #ContactUs {
     margin-top: 30px;
     height: 98vh;
@@ -182,6 +212,7 @@ header button,header a {
     align-items: center;
     flex-wrap: wrap;
 }
+
 @media screen and (max-width:800px) {
     #links {
         display: none;
