@@ -5,22 +5,53 @@
 }
 
 body {
-    position: fixed;
     background-color: rgba(0, 0, 0, 1);
     overflow: auto;
+    overscroll-behavior: contain;
+    overflow-x: hidden;
+    /* background: linear-gradient(135deg, #3494e6, #ec6ead); Gradient background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 header {
     min-width: 98vw;
-    /* position: sticky; */
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(50px);
+    background-color: #1a1a1a;
+    /* رنگ پس زمینه هدر */
+    backdrop-filter: blur(10px);
+    /* افزودن افکت blur به هدر */
     display: flex;
     height: 10vh;
+    position: sticky;
+    left: 1vw;
     border-radius: 15px;
     justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
+    /* رنگ متن هدر */
 }
 
 header>#logo {
@@ -31,24 +62,12 @@ header>#logo {
     margin: 10px;
     font-size: 1em;
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
+    /* رنگ متن لوگو */
 }
 
-header #links,
-#links a {
-    font-size: 100%;
-    margin: 10px;
-    justify-self: flex-start;
-    flex: 1 1 50%;
-    display: flex;
-    gap: 10px;
-    text-decoration: none;
-    color: rgb(28, 38, 119);
-    margin-right: auto;
-    justify-content: space-around;
-}
 
-header>button {
+header button,header a {
     flex: 1 0 20%;
     margin-left: 10%;
     height: 100%;
@@ -69,6 +88,7 @@ header>button {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    overflow: auto;
 }
 
 .btn {
@@ -76,7 +96,12 @@ header>button {
     display: flex;
     justify-content: center;
 }
-
+#links {
+   justify-content: space-around;
+   align-items: center;
+   display: flex;
+   flex: 1 0 50%;
+}
 .btn button {
     align-items: center;
     background-clip: padding-box;
@@ -117,4 +142,61 @@ header>button {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+}
+
+#os-feat {
+    width: 45vw;
+    margin: 2vh;
+    height: 30vh;
+    background-color: transparent;
+    color: #f1f1f1;
+    justify-self: center;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.7em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#AboutUs {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#ContactUs {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:800px) {
+    #links {
+        display: none;
+    }
+
+    #Home>img {
+        min-width: 50vw;
+        margin: 5px;
+    }
+
+    #Home p {
+        text-align: center;
+    }
+
+    #Home {
+        height: 70vh;
+    }
 }
