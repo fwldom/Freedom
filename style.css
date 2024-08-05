@@ -192,13 +192,37 @@ header>a {
     text-align: center;
     background-color: #3332323d;
     border-radius: 15px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#Services {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    background-color: #3332323d;
+    border-radius: 15px;
     font-size: 2em;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-
+#Services  img {
+    max-width: 30vw;
+    border-radius: 15px;
+}
+#Services #sect {
+    max-width: 45vw;
+    max-height: 15vh;
+}
+#Services h2 {
+    font-size: 18px;
+    margin: 10px;
+}
 #ContactUs {
     margin-top: 30px;
     height: 98vh;
@@ -229,5 +253,25 @@ header>a {
 
     #Home {
         height: 70vh;
+    }
+    #Services  img {
+        max-width: 75vw;
+        border-radius: 15px;
+    }
+    #Services #sect {
+        max-width: 90vw;
+        max-height: 25vh;
+    }
+    #os-feat {
+        width: 90vw;
+        margin: 2vh;
+        height: 30vh;
+        background-color: transparent;
+        color: #f1f1f1;
+        justify-self: center;
+        text-align: left;
+        line-height: 1.5;
+        font-size: 0.7em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 }
